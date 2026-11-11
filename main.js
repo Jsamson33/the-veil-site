@@ -202,69 +202,73 @@ const RUNES_DATA = [
     effect: "Amplifie le rendement d'énergie d'Eau récolté à chaque particule aspirée (+12 % / niveau)."
   },
   {
-    id: "amber_distillation",
+    id: "aspiration_vortex",
     num: "R21",
-    name: "Distillation d'Ambre",
+    name: "Vortex d'Aspiration",
     element: "neutral",
     cat: "alchemy",
     unlock: "Palier Atelier 1",
-    effect: "Augmente le gain net d'Ambre Astral à chaque palier de vague franchi (+10 % / niveau)."
+    effect: "Augmente la fréquence d'apparition et la vitesse de dérive des particules d'énergie ambiantes."
   },
   {
-    id: "alchemical_catalyst",
+    id: "amber_condensation",
     num: "R22",
-    name: "Catalyseur Alchimique",
+    name: "Condensation d'Ambre",
     element: "neutral",
     cat: "alchemy",
     unlock: "Palier Atelier 2",
-    effect: "Réduit le coût d'amélioration en run de toutes les runes élémentaires associées."
+    effect: "Augmente l'Ambre Astral récolté sur chaque Mini-Boss et Gardien dissous (+5 % / niveau)."
   },
   {
-    id: "essence_transmute",
-    num: "R23",
-    name: "Transmutation d'Essence",
-    element: "neutral",
+    id: "spontaneous_transmutation",
+    num: "R24",
+    name: "Transmutation Spontanée",
+    element: "air",
     cat: "alchemy",
     unlock: "Palier Atelier 4",
-    effect: "Convertit automatiquement l'énergie en surplus vers l'élément le plus déficitaire."
+    effect: "À chaque étage franchi, X% de chance qu'une rune débloquée aléatoire gagne +1 niveau gratuitement pour le reste de la run."
   },
 
-  // Famille 4 — Synergies & Trinité (4 Runes)
+  // Famille 4 — Synergies Hermétiques (4 Runes)
   {
-    id: "trinity_resonance",
-    num: "R24",
-    name: "Résonance de la Trinité",
-    element: "neutral",
-    cat: "synergies",
-    unlock: "Palier Atelier 3",
-    effect: "Octroie un multiplicateur de dégâts massif lorsque les trois jauges élémentaires sont actives."
-  },
-  {
-    id: "prismatic_overload",
+    id: "synergy_tempest",
     num: "R25",
-    name: "Surcharge Prismatique",
-    element: "neutral",
-    cat: "synergies",
-    unlock: "Palier Atelier 3",
-    effect: "Augmente l'efficacité globale des Prismes élémentaires sertis dans l'Atelier (+10 % / niveau)."
-  },
-  {
-    id: "astral_harmony",
-    num: "R26",
-    name: "Harmonie Astrale",
-    element: "neutral",
+    name: "Tempête Conductrice",
+    element: "synergy",
+    elemLabel: "Air + Eau",
     cat: "synergies",
     unlock: "Palier Atelier 4",
-    effect: "Accroît la vitesse de canalisation lorsque les runes d'Air, Terre et Eau ont un niveau égal."
+    effect: "Chaque pulsation critique de la phase Air déclenche une onde d'Eau qui ralentit davantage la dérive du Mini-Boss pendant 2s."
   },
   {
-    id: "elemental_infusion",
+    id: "synergy_monolith",
+    num: "R26",
+    name: "Monolithe Réfractaire",
+    element: "synergy",
+    elemLabel: "Terre + Air",
+    cat: "synergies",
+    unlock: "Palier Atelier 4",
+    effect: "Chaque fois que l'Avatar subit ou absorbe une attaque, la Fréquence de Pulsation du rayon augmente de +X % pendant 3s."
+  },
+  {
+    id: "synergy_surge",
     num: "R27",
-    name: "Infusion Tri-Phasée",
-    element: "neutral",
+    name: "Crue Tellurique",
+    element: "synergy",
+    elemLabel: "Eau + Terre",
     cat: "synergies",
     unlock: "Palier Atelier 5",
-    effect: "Applique un affaiblissement alchimique permanent au Gardien dès son entrée dans le Cercle."
+    effect: "Le surplus de régénération de Mana (quand le Mana est à 100 %) se cristallise en une Barrière Tellurique temporaire (jusqu'à +X % du Mana Max)."
+  },
+  {
+    id: "synergy_trinity",
+    num: "R28",
+    name: "Trinité",
+    element: "synergy",
+    elemLabel: "Air + Terre + Eau",
+    cat: "synergies",
+    unlock: "Palier Atelier 5",
+    effect: "Multiplie les dégâts totaux du Rayon Tri-Phasé par (1 + X%) tant que les 3 runes de flux (R1, R2, R3) sont maintenues à l'équilibre (écart maximal de ±2 niveaux entre elles)."
   }
 ];
 
@@ -289,7 +293,8 @@ function renderRunes() {
       rune.name.toLowerCase().includes(q) ||
       rune.effect.toLowerCase().includes(q) ||
       rune.num.toLowerCase().includes(q) ||
-      rune.element.toLowerCase().includes(q);
+      rune.element.toLowerCase().includes(q) ||
+      (rune.elemLabel && rune.elemLabel.toLowerCase().includes(q));
     return matchesCat && matchesSearch;
   });
 
@@ -307,13 +312,14 @@ function renderRunes() {
     .map((rune) => {
       const elemClass = `pill-${rune.element}`;
       const elemLabel =
-        rune.element === "air"
+        rune.elemLabel ||
+        (rune.element === "air"
           ? "Air"
           : rune.element === "earth"
           ? "Terre"
           : rune.element === "water"
           ? "Eau"
-          : "Neutre";
+          : "Neutre");
 
       return `
       <article class="rune-card" data-cat="${rune.cat}">
@@ -333,17 +339,38 @@ function renderRunes() {
     .join("");
 }
 
-// Accessible Tab switching with roving focusgroup support
-tabButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    tabButtons.forEach((b) => {
-      b.setAttribute("aria-selected", "false");
-      b.removeAttribute("focusgroupstart");
-    });
-    btn.setAttribute("aria-selected", "true");
-    btn.setAttribute("focusgroupstart", "");
-    currentCategory = btn.dataset.cat || "all";
-    renderRunes();
+// Accessible WAI-ARIA Tab switching with roving tabindex & keyboard support
+function selectTab(btn, focus = true) {
+  tabButtons.forEach((b) => {
+    b.setAttribute("aria-selected", "false");
+    b.setAttribute("tabindex", "-1");
+    b.removeAttribute("focusgroupstart");
+  });
+  btn.setAttribute("aria-selected", "true");
+  btn.setAttribute("tabindex", "0");
+  btn.setAttribute("focusgroupstart", "");
+  if (focus) btn.focus();
+  currentCategory = btn.dataset.cat || "all";
+  renderRunes();
+}
+
+tabButtons.forEach((btn, index) => {
+  btn.addEventListener("click", () => selectTab(btn, false));
+  btn.addEventListener("keydown", (e) => {
+    let targetIndex = null;
+    if (e.key === "ArrowRight") {
+      targetIndex = (index + 1) % tabButtons.length;
+    } else if (e.key === "ArrowLeft") {
+      targetIndex = (index - 1 + tabButtons.length) % tabButtons.length;
+    } else if (e.key === "Home") {
+      targetIndex = 0;
+    } else if (e.key === "End") {
+      targetIndex = tabButtons.length - 1;
+    }
+    if (targetIndex !== null) {
+      e.preventDefault();
+      selectTab(tabButtons[targetIndex], true);
+    }
   });
 });
 
@@ -435,8 +462,8 @@ if (canvas) {
 
   function resizeCanvas() {
     const rect = canvas.getBoundingClientRect();
-    width = rect.width;
-    height = rect.height;
+    width = rect.width || 560;
+    height = rect.height || 560;
     dpr = window.devicePixelRatio || 1;
     canvas.width = width * dpr;
     canvas.height = height * dpr;
@@ -456,14 +483,19 @@ if (canvas) {
   let repulsionWaveAlpha = 0;
   let waveCount = 12;
 
-  // Elemental Colors Map
-  const PALETTE = {
-    air: "#81C784",
-    earth: "#D7CCC8",
-    water: "#64B5F6",
-    gold: "#E5C158",
-    avatarGlow: "#D4AF37"
-  };
+  // Dynamic Theme-aware Elemental Colors
+  function getPalette() {
+    const isDark = getCurrentRenderedTheme() === "dark";
+    return {
+      air: isDark ? "#81C784" : "#2E7D32",
+      earth: isDark ? "#D7CCC8" : "#8D6E63",
+      water: isDark ? "#64B5F6" : "#1565C0",
+      gold: isDark ? "#E5C158" : "#B8860B",
+      ring: isDark ? "rgba(212, 175, 55, 0.22)" : "rgba(184, 134, 11, 0.35)",
+      ringTriangle: isDark ? "rgba(212, 175, 55, 0.14)" : "rgba(184, 134, 11, 0.22)",
+      manaAura: isDark ? "rgba(212, 175, 55, 0.25)" : "rgba(184, 134, 11, 0.25)"
+    };
+  }
 
   // Particles pool
   const particles = [];
@@ -490,7 +522,6 @@ if (canvas) {
         this.element = focusedElement;
       }
 
-      this.color = PALETTE[this.element];
       this.alpha = Math.random() * 0.5 + 0.4;
       this.orbitSpeed = (Math.random() * 0.015 + 0.005) * (Math.random() < 0.5 ? 1 : -1);
       this.inwardSpeed = Math.random() * 0.7 + 0.4;
@@ -525,11 +556,12 @@ if (canvas) {
       }
     }
 
-    draw() {
+    draw(palette) {
       ctx.save();
       ctx.globalAlpha = this.alpha;
-      ctx.fillStyle = this.color;
-      ctx.shadowColor = this.color;
+      const color = palette[this.element] || palette.gold;
+      ctx.fillStyle = color;
+      ctx.shadowColor = color;
       ctx.shadowBlur = 8;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2);
@@ -567,18 +599,33 @@ if (canvas) {
     repulsionWaveAlpha = 1;
     boss.dist = Math.min(boss.dist + 50, width * 0.44);
 
-    // Subtle audio chimes or feedback if desired
     if (repulsionBtn) {
       repulsionBtn.style.transform = "scale(0.94)";
       setTimeout(() => (repulsionBtn.style.transform = ""), 150);
     }
   }
 
+  // Click & Non-blocking Mobile Tap
   canvas.addEventListener("click", () => triggerRepulsion());
+
+  let touchStartX = 0;
+  let touchStartY = 0;
   canvas.addEventListener("touchstart", (e) => {
-    e.preventDefault();
-    triggerRepulsion();
-  }, { passive: false });
+    if (e.touches.length === 1) {
+      touchStartX = e.touches[0].clientX;
+      touchStartY = e.touches[0].clientY;
+    }
+  }, { passive: true });
+
+  canvas.addEventListener("touchend", (e) => {
+    if (e.changedTouches.length === 1) {
+      const dx = Math.abs(e.changedTouches[0].clientX - touchStartX);
+      const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+      if (dx < 12 && dy < 12) {
+        triggerRepulsion();
+      }
+    }
+  }, { passive: true });
 
   if (repulsionBtn) {
     repulsionBtn.addEventListener("click", triggerRepulsion);
@@ -610,10 +657,11 @@ if (canvas) {
     ctx.clearRect(0, 0, width, height);
 
     const outerRadius = width * 0.42;
+    const palette = getPalette();
 
     // 1. Draw Sacred Geometry Astral Circles
     ctx.save();
-    ctx.strokeStyle = "rgba(212, 175, 55, 0.22)";
+    ctx.strokeStyle = palette.ring;
     ctx.lineWidth = 1.5;
 
     // Outer Range Ring
@@ -633,7 +681,7 @@ if (canvas) {
     ctx.save();
     ctx.translate(centerX, centerY);
     ctx.rotate(frame * 0.003 * simSpeed);
-    ctx.strokeStyle = "rgba(212, 175, 55, 0.14)";
+    ctx.strokeStyle = palette.ringTriangle;
     ctx.beginPath();
     for (let i = 0; i < 3; i++) {
       const a = (i * Math.PI * 2) / 3;
@@ -651,7 +699,7 @@ if (canvas) {
     // 2. Update & Draw Particles
     particles.forEach((p) => {
       p.update();
-      p.draw();
+      p.draw(palette);
     });
 
     // 3. Update & Draw Repulsion Wave
@@ -661,9 +709,9 @@ if (canvas) {
       if (repulsionWaveAlpha > 0) {
         ctx.save();
         ctx.globalAlpha = repulsionWaveAlpha;
-        ctx.strokeStyle = PALETTE.gold;
+        ctx.strokeStyle = palette.gold;
         ctx.lineWidth = 3;
-        ctx.shadowColor = PALETTE.gold;
+        ctx.shadowColor = palette.gold;
         ctx.shadowBlur = 15;
         ctx.beginPath();
         ctx.arc(centerX, centerY, repulsionWaveRadius, 0, Math.PI * 2);
@@ -685,7 +733,8 @@ if (canvas) {
         boss.reset();
         waveCount++;
         if (canvasWaveTag) {
-          canvasWaveTag.textContent = `VAGUE ${waveCount} / GARDIEN`;
+          const isGuardian = waveCount % 10 === 0;
+          canvasWaveTag.textContent = `ÉTAGE ${waveCount} / ${isGuardian ? "GARDIEN MAJEUR" : "MINI-BOSS"}`;
         }
       }
     }
@@ -725,9 +774,9 @@ if (canvas) {
     if (boss.dist <= outerRadius) {
       ctx.save();
       const strands = [
-        { color: PALETTE.air, offset: Math.sin(frame * 0.15) * 4 },
-        { color: PALETTE.earth, offset: Math.sin(frame * 0.15 + 2) * 4 },
-        { color: PALETTE.water, offset: Math.sin(frame * 0.15 + 4) * 4 }
+        { color: palette.air, offset: Math.sin(frame * 0.15) * 4 },
+        { color: palette.earth, offset: Math.sin(frame * 0.15 + 2) * 4 },
+        { color: palette.water, offset: Math.sin(frame * 0.15 + 4) * 4 }
       ];
 
       strands.forEach((s) => {
@@ -750,15 +799,15 @@ if (canvas) {
     ctx.save();
     // Mana Aura
     const pulse = Math.sin(frame * 0.05) * 3;
-    ctx.fillStyle = "rgba(212, 175, 55, 0.25)";
-    ctx.shadowColor = PALETTE.gold;
+    ctx.fillStyle = palette.manaAura;
+    ctx.shadowColor = palette.gold;
     ctx.shadowBlur = 20;
     ctx.beginPath();
     ctx.arc(centerX, centerY, 20 + pulse, 0, Math.PI * 2);
     ctx.fill();
 
     // Core Solid Glyph
-    ctx.fillStyle = PALETTE.gold;
+    ctx.fillStyle = palette.gold;
     ctx.beginPath();
     ctx.arc(centerX, centerY, 10, 0, Math.PI * 2);
     ctx.fill();
@@ -768,7 +817,7 @@ if (canvas) {
       const a = (frame * 0.04 * simSpeed) + (i * Math.PI * 2) / 3;
       const ox = centerX + Math.cos(a) * 16;
       const oy = centerY + Math.sin(a) * 16;
-      const colors = [PALETTE.air, PALETTE.earth, PALETTE.water];
+      const colors = [palette.air, palette.earth, palette.water];
       ctx.fillStyle = colors[i];
       ctx.beginPath();
       ctx.arc(ox, oy, 2.5, 0, Math.PI * 2);
