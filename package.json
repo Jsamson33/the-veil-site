@@ -1,0 +1,26 @@
+{
+  "name": "the-veil-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site vitrine officiel de The Veil: Astral Idle",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node -e \"const fs=require('fs'); fs.copyFileSync('index.html','public/index.html'); fs.copyFileSync('style.css','public/style.css'); fs.copyFileSync('main.js','public/main.js'); fs.cpSync('assets','public/assets',{recursive:true}); console.log('Static site synced to public/');\"",
+    "preview": "vite preview",
+    "serve": "npx serve public"
+  },
+  "devDependencies": {
+    "vite": "^6.0.0"
+  },
+  "keywords": [
+    "the-veil",
+    "astral-idle",
+    "idle-game",
+    "alchemical",
+    "flutter",
+    "game-showcase"
+  ],
+  "author": "Jsamson",
+  "license": "MIT"
+}
