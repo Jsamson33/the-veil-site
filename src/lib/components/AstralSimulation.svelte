@@ -36,9 +36,7 @@
 	let waveCount = $state(12);
 	let pulseScale = $state(false);
 
-	const waveTag = $derived(
-		`ÉTAGE ${waveCount} / ${waveCount % 10 === 0 ? 'GARDIEN MAJEUR' : 'MINI-BOSS'}`
-	);
+	const waveTag = $derived(waveCount % 10 === 0 ? 'PRÉSENCE MAJEURE' : 'GARDIEN EN APPROCHE');
 
 	// Assigned inside onMount so the template buttons can drive the canvas engine.
 	let triggerPulse: () => void = () => {};

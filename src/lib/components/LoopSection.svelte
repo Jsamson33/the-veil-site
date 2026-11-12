@@ -4,7 +4,8 @@
 			<span class="section-kicker">La Dualité Hermétique</span>
 			<h2 class="section-title">ORA ET LABORA : LA DOUBLE BOUCLE</h2>
 			<p class="section-subtitle">
-				Un équilibre parfait entre l'action hypnotique du Plan Astral et la sérénité méditative du Sanctuaire.
+				L'action et la contemplation, indissociables. Une boucle dont chaque passage révèle
+				un peu plus du Voile — sans jamais le dévoiler entièrement.
 			</p>
 		</div>
 
@@ -18,9 +19,10 @@
 							><circle cx="12" cy="12" r="10" /><path d="M12 2a14.5 14.5 0 0 0 0 20" /></svg
 						>
 					</div>
-					<h3 class="step-title">Expédition Astrale</h3>
+					<h3 class="step-title">L'Expédition</h3>
 					<p class="step-desc">
-						Projetez votre Avatar. L'aspiration attire les particules et les Gardiens. Investissez vos énergies en direct pour monter vos runes temporaires.
+						Projetez votre Avatar au-delà du Voile. Les flux s'agitent, les Gardiens approchent.
+						À vous de tenir le Cercle.
 					</p>
 				</div>
 			</div>
@@ -40,9 +42,10 @@
 							/></svg
 						>
 					</div>
-					<h3 class="step-title">Ambre Astral</h3>
+					<h3 class="step-title">La Récolte</h3>
 					<p class="step-desc">
-						Chaque Boss dissous et chaque étage franchi vous octroie de précieux cristaux d'Ambre Astral, multipliés selon la Strate choisie.
+						Ce qui est dissous laisse derrière soi une trace. Une matière rare, dont l'usage
+						ne se révèle qu'avec le temps.
 					</p>
 				</div>
 			</div>
@@ -60,9 +63,10 @@
 							><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg
 						>
 					</div>
-					<h3 class="step-title">Atelier & Prismes</h3>
+					<h3 class="step-title">La Forge</h3>
 					<p class="step-desc">
-						Débloquez de nouvelles runes, améliorez leur niveau de départ permanent et taillez des Prismes pour bonifier chaque élément.
+						Dans l'Atelier, les runes prennent forme. Chaque choix laisse une empreinte durable
+						sur votre sanctuaire.
 					</p>
 				</div>
 			</div>
@@ -80,9 +84,10 @@
 							><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z" /></svg
 						>
 					</div>
-					<h3 class="step-title">Études du Grimoire</h3>
+					<h3 class="step-title">L'Étude</h3>
 					<p class="step-desc">
-						Lancez des études à durée réelle qui progressent même hors-ligne : vitesse de jeu, achat groupé, réduction de coûts et automatisation.
+						Le Grimoire poursuit son œuvre, même lorsque vous n'êtes plus là.
+						La patience est une autre forme de puissance.
 					</p>
 				</div>
 			</div>

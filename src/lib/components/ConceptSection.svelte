@@ -4,8 +4,8 @@
 			<span class="section-kicker">L'Hypnose du Vortex</span>
 			<h2 class="section-title">UN DESIGN ZEN & ALCHIMIQUE</h2>
 			<p class="section-subtitle">
-				Oubliez les nuées confuses d'ennemis et les explosions saturées. The Veil réinvente le genre incrémental
-				autour d'une signature épurée inspirée des astrolabes hermétiques et des manuscrits anciens.
+				The Veil ne révèle pas tout. Derrière une esthétique épurée se cachent des systèmes profonds,
+				à découvrir au fil de votre ascension.
 			</p>
 		</div>
 
@@ -27,10 +27,10 @@
 						<path d="M2 12h20"></path>
 					</svg>
 				</div>
-				<h3 class="pillar-title">Le Rayon Tri-Phasé</h3>
+				<h3 class="pillar-title">Le Cercle Astral</h3>
 				<p class="pillar-text">
-					Un unique Gardien ou Mini-Boss par vague. Dès qu'il franchit l'Envergure du Cercle, votre Avatar le verrouille
-					avec un faisceau continu tressé mêlant l'Air, la Terre et l'Eau en temps réel.
+					Un Gardien s'avance. Le Cercle s'éveille. Votre Avatar tisse un lien continu avec les flux
+					pour repousser l'inévitable. La précision prime sur la fureur.
 				</p>
 			</article>
 
@@ -51,10 +51,10 @@
 						<polyline points="2 12 12 17 22 12"></polyline>
 					</svg>
 				</div>
-				<h3 class="pillar-title">L'Atelier des Runes</h3>
+				<h3 class="pillar-title">L'Atelier</h3>
 				<p class="pillar-text">
-					Dépensez l'Ambre Astral pour élever définitivement le niveau de départ de vos 28 Runes, sertir des Prismes colorés
-					sur chaque flux et forger vos Reliques de puissance.
+					Un sanctuaire où les runes prennent forme. Ce qui s'y forge laisse une empreinte durable,
+					mais nul ne connaît le prix avant de l'avoir payé.
 				</p>
 			</article>
 
@@ -76,10 +76,10 @@
 						<path d="M6 14h6"></path>
 					</svg>
 				</div>
-				<h3 class="pillar-title">Le Grimoire & Études</h3>
+				<h3 class="pillar-title">Le Grimoire</h3>
 				<p class="pillar-text">
-					Conformément à l'adage alchimique <em>Ora et Labora</em>, lancez des recherches temporelles 24h/24 pour
-					débloquer l'achat groupé (&times;Max), les accélérations de vitesse et des pouvoirs transcendants.
+					Des études patientes, poursuivies même hors de votre présence. Le Grimoire récompense
+					ceux qui savent attendre. <em>Ora et Labora.</em>
 				</p>
 			</article>
 
@@ -99,10 +99,10 @@
 						<circle cx="12" cy="11" r="3"></circle>
 					</svg>
 				</div>
-				<h3 class="pillar-title">100% Offline-First</h3>
+				<h3 class="pillar-title">Le Voile</h3>
 				<p class="pillar-text">
-					Votre sanctuaire continue d'extraire et de distiller les énergies même lorsque l'application est fermée.
-					Aucune connexion constante n'est requise pour progresser.
+					La progression ne s'arrête jamais tout à fait. Votre sanctuaire continue de veiller
+					lorsque l'écran s'éteint, sans jamais trahir ses secrets.
 				</p>
 			</article>
 		</div>

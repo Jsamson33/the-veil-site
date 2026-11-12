@@ -14,9 +14,9 @@
 
 		<div class="footer-links">
 			<a href="#concept">Concept</a>
-			<a href="#elements">Éléments</a>
+			<a href="#elements">Flux</a>
 			<a href="#runes">Runes</a>
-			<a href="#boucle">Ora & Labora</a>
+			<a href="#boucle">La Boucle</a>
 			<a href="https://github.com/Jsamson33/the-veil" target="_blank" rel="noopener">GitHub</a>
 		</div>
 

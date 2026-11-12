@@ -11,21 +11,18 @@ Le site est construit avec **Svelte 5** et **SvelteKit 3**, rendu entièrement e
 ## ✨ Fonctionnalités du Site
 
 - **Simulation interactive du Cercle Astral (Canvas HTML5 / Canvas 2D)** :
-  - Particules élémentaires d'Air (Vert Céladon), de Terre (Ocre Ambré) et d'Eau (Bleu Azur) aspirées vers le centre du vortex.
-  - Dérive du Gardien / Mini-Boss de vague.
-  - Rayon Tri-Phasé continu tressé verrouillant la cible à l'entrée du Cercle.
-  - Interaction utilisateur : clic/toucher pour déclencher une *Onde de Répulsion*, filtres par élément et sélecteur de vitesse (× 1, × 2, × 5).
-- **Codex des 28 Runes du jeu** :
-  - Données typées et centralisées dans `src/lib/data/runes.ts`.
-  - Onglets accessibles conformes aux standards ARIA (*WAI-ARIA Tabs*, roving tabindex).
-  - Barre de recherche instantanée, rendue côté serveur au build.
+  - Particules élémentaires, Gardien et faisceau animés en temps réel vers le centre du vortex.
+  - Contrôles tactiles : onde de répulsion, filtres par flux et sélecteur de vitesse.
+- **Système de runes volontairement évasif** :
+  - Une section teaser qui mentionne le système sans révéler le Codex complet ni ses mécaniques.
+  - Le mystère est conservé pour donner envie de découvrir le jeu.
 - **Thème bimodal Parchemin Hermétique & Nuit Astrale** :
   - Support de `light-dark()` et `<meta name="color-scheme">` sans flash (anti-FOUC).
   - Palette originale du jeu (`#FAF8F5`, `#D4AF37`, `#8A7968`, etc.).
 - **Architecture de jeu & Présentation "Ora et Labora"** :
-  - Explication de la boucle de run et de la métaprogression dans l'Atelier et le Grimoire.
+  - Une boucle présentée de façon atmosphérique, sans dévoiler les détails de progression.
 - **Section Téléchargement & FAQ intégrée** :
-  - Accès aux releases APK Android et aperçu du déploiement Store.
+  - Accès aux releases APK Android et réponses volontairement succinctes.
 - **Déploiement statique automatisé** :
   - Workflows GitHub Actions pour GitHub Pages et Firebase Hosting.
 
@@ -72,7 +69,6 @@ the-veil-site/
 │   ├── app.css                # Design system global (thèmes light-dark)
 │   ├── lib/
 │   │   ├── components/        # Sections et îlots interactifs Svelte 5
-│   │   ├── data/runes.ts      # Les 28 runes du Codex (données typées)
 │   │   ├── theme.ts           # Gestion du thème clair/sombre
 │   │   └── index.ts
 │   └── routes/

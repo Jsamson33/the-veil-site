@@ -15,9 +15,8 @@
 				<span class="gradient-text">MAÎTRISEZ LES FLUX PRIMORDIAUX.</span>
 			</h1>
 			<p class="hero-pitch">
-				Projetez votre conscience au-delà du Voile Astral. Dans un sanctuaire d'aspiration hypnotique,
-				verrouillez les Gardiens élémentaires avec un <strong>Rayon Tri-Phasé continu</strong>, transmutez
-				l'<strong>Ambre Astral</strong> dans votre Atelier et accomplissez les études millénaires de votre Grimoire.
+				Projetez votre conscience au-delà du Voile Astral. Laissez les flux primordiaux converger vers le cœur du Cercle,
+				éveillez des runes oubliées et poursuivez les études de votre Grimoire. Chaque secret du Voile se mérite.
 			</p>
 
 			<div class="hero-actions">
@@ -60,22 +59,22 @@
 
 			<div class="hero-stats">
 				<div class="stat-item">
-					<span class="stat-number">28</span>
-					<span class="stat-label">Runes Alchimiques</span>
+					<span class="stat-number">∞</span>
+					<span class="stat-label">Runes Éternelles</span>
 				</div>
 				<div class="stat-divider" aria-hidden="true"></div>
 				<div class="stat-item">
-					<span class="stat-number">3</span>
+					<span class="stat-number">◈</span>
 					<span class="stat-label">Flux Primordiaux</span>
 				</div>
 				<div class="stat-divider" aria-hidden="true"></div>
 				<div class="stat-item">
-					<span class="stat-number">24/7</span>
-					<span class="stat-label">Grimoire & Offline</span>
+					<span class="stat-number">☾</span>
+					<span class="stat-label">Grimoire en éveil</span>
 				</div>
 				<div class="stat-divider" aria-hidden="true"></div>
 				<div class="stat-item">
-					<span class="stat-number">100%</span>
+					<span class="stat-number">✦</span>
 					<span class="stat-label">Zen & Sans Bruit</span>
 				</div>
 			</div>

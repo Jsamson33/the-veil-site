@@ -2,7 +2,7 @@
 	import Hero from '#lib/components/Hero.svelte';
 	import ConceptSection from '#lib/components/ConceptSection.svelte';
 	import ElementsSection from '#lib/components/ElementsSection.svelte';
-	import RunesCodex from '#lib/components/RunesCodex.svelte';
+	import RuneSystemSection from '#lib/components/RuneSystemSection.svelte';
 	import LoopSection from '#lib/components/LoopSection.svelte';
 	import ScreensSection from '#lib/components/ScreensSection.svelte';
 	import FaqSection from '#lib/components/FaqSection.svelte';
@@ -13,7 +13,7 @@
 	<title>The Veil: Astral Idle — Jeu Mobile Alchimique & Stratégique</title>
 	<meta
 		name="description"
-		content="Découvrez The Veil: Astral Idle, l'idle game alchimique sur Android. Canalisez le Rayon Tri-Phasé d'Air, de Terre et d'Eau, forgez 28 Runes éternelles et explorez le Grimoire."
+		content="Découvrez The Veil: Astral Idle, l'idle game alchimique sur Android. Franchissez le Voile, éveillez vos runes et poursuivez les études de votre Grimoire. Le reste reste à découvrir."
 	/>
 	<meta
 		name="keywords"
@@ -26,7 +26,7 @@
 	<meta property="og:title" content="The Veil: Astral Idle — Jeu Mobile Alchimique & Stratégique" />
 	<meta
 		property="og:description"
-		content="Plongez au-delà du Voile Astral. Canalisez les flux primordiaux d'Air, de Terre et d'Eau, forgez des Runes éternelles et domptez le Grimoire."
+		content="Plongez au-delà du Voile Astral. Laissez les flux primordiaux converger, éveillez vos runes et domptez le Grimoire. Un sanctuaire alchimique à découvrir."
 	/>
 	<meta property="og:image" content="assets/icons/icon-512.png" />
 	<meta name="twitter:card" content="summary_large_image" />
@@ -42,7 +42,7 @@
 	<Hero />
 	<ConceptSection />
 	<ElementsSection />
-	<RunesCodex />
+	<RuneSystemSection />
 	<LoopSection />
 	<ScreensSection />
 	<FaqSection />

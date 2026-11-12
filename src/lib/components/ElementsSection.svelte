@@ -2,10 +2,10 @@
 	<div class="container">
 		<div class="section-heading text-center">
 			<span class="section-kicker">La Trinité Fondamentale</span>
-			<h2 class="section-title">LES TROIS FLUX PRIMORDIAUX</h2>
+			<h2 class="section-title">LES FLUX PRIMORDIAUX</h2>
 			<p class="section-subtitle">
-				Chaque particule dérivant vers le cœur du Cercle nourrit l'un des trois flux élémentaires.
-				Chaque élément possède son identité tactique, ses runes maîtresses et ses Prismes.
+				Trois courants traversent le Voile. Chacun possède sa propre volonté, ses propres exigences.
+				Apprenez à les écouter avant de prétendre les maîtriser.
 			</p>
 		</div>
 
@@ -33,21 +33,13 @@
 					</div>
 				</div>
 				<p class="element-desc">
-					Le souffle de l'agilité et de la frappe incisive. L'Air gouverne la vitesse de frappe,
-					la précision des coups critiques et l'Onde de Répulsion qui repousse les Gardiens téméraires.
+					Le souffle, l'élan, l'instant. Le flux aérien récompense la précision et l'audace.
+					Il ne pardonne pas l'hésitation.
 				</p>
 				<div class="element-meta">
 					<div class="meta-row">
-						<span class="meta-label">Couleur Hermétique</span>
-						<span class="meta-value air-text">Vert Céladon (#81C784)</span>
-					</div>
-					<div class="meta-row">
-						<span class="meta-label">Runes Clés</span>
-						<span class="meta-value">Chance Critique, Onde de Répulsion, Sursis Hermétique</span>
-					</div>
-					<div class="meta-row">
-						<span class="meta-label">Rôle Tactique</span>
-						<span class="meta-value">Burst Critique & Contrôle de foule</span>
+						<span class="meta-label">Affinité</span>
+						<span class="meta-value air-text">Souffle • Précision • Rupture</span>
 					</div>
 				</div>
 			</div>
@@ -73,21 +65,13 @@
 					</div>
 				</div>
 				<p class="element-desc">
-					La résistance inébranlable et le poids de la matière. La Terre érige l'Écorce Tellurique,
-					absorbe les chocs bruts, brise les boucliers des Boss et renvoie leur fureur via le Miroir d'Épines.
+					La mémoire du monde, la résistance, le poids. Le flux tellurique protège et renvoie
+					ce qu'on lui oppose. Il se souvient de chaque impact.
 				</p>
 				<div class="element-meta">
 					<div class="meta-row">
-						<span class="meta-label">Couleur Hermétique</span>
-						<span class="meta-value earth-text">Ocre Minéral (#D7CCC8)</span>
-					</div>
-					<div class="meta-row">
-						<span class="meta-label">Runes Clés</span>
-						<span class="meta-value">Écorce Tellurique, Brise-Égide, Miroir d'Épines</span>
-					</div>
-					<div class="meta-row">
-						<span class="meta-label">Rôle Tactique</span>
-						<span class="meta-value">Mitigation, Perçage & Rétribution</span>
+						<span class="meta-label">Affinité</span>
+						<span class="meta-value earth-text">Endurance • Protection • Rétribution</span>
 					</div>
 				</div>
 			</div>
@@ -113,21 +97,13 @@
 					</div>
 				</div>
 				<p class="element-desc">
-					Le fluide vital, la régénération continue et le ralentissement subtil. L'Eau alimente la Source Intérieure,
-					ralentit la dérive des monstres grâce à la Viscosité Astrale et convertit les dégâts en Mana par le Siphon.
+					Le courant, la patience, la transmutation. Le flux aquatique régénère et ralentit
+					l'inévitable. Rien ne lui résiste longtemps.
 				</p>
 				<div class="element-meta">
 					<div class="meta-row">
-						<span class="meta-label">Couleur Hermétique</span>
-						<span class="meta-value water-text">Bleu Azur (#64B5F6)</span>
-					</div>
-					<div class="meta-row">
-						<span class="meta-label">Runes Clés</span>
-						<span class="meta-value">Source Intérieure, Viscosité Astrale, Siphon Astral</span>
-					</div>
-					<div class="meta-row">
-						<span class="meta-label">Rôle Tactique</span>
-						<span class="meta-value">Régénération continue & Frein cinétique</span>
+						<span class="meta-label">Affinité</span>
+						<span class="meta-value water-text">Régénération • Contrôle • Transmutation</span>
 					</div>
 				</div>
 			</div>
@@ -137,8 +113,8 @@
 		<div class="v2-callout">
 			<div class="v2-sparkle" aria-hidden="true">✦</div>
 			<p>
-				<strong>Au-delà des Voiles Supérieurs :</strong> Découvrez dans les futures strates le second triplet alchimique légendaire :
-				<span class="v2-elements">Feu ardent, Foudre céleste et Éther primordial</span>.
+				<strong>Au-delà des Voiles Supérieurs :</strong> d'autres courants attendent ceux qui iront plus loin.
+				Leur nature reste encore à découvrir.
 			</p>
 		</div>
 	</div>

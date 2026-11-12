@@ -4,10 +4,10 @@
 
 	const links = [
 		{ href: '#concept', label: 'Le Concept' },
-		{ href: '#elements', label: 'Les Éléments' },
+		{ href: '#elements', label: 'Les Flux' },
 		{ href: '#cercle', label: 'Le Cercle Astral' },
-		{ href: '#runes', label: 'Codex des Runes' },
-		{ href: '#boucle', label: 'Ora & Labora' },
+		{ href: '#runes', label: 'Les Runes' },
+		{ href: '#boucle', label: 'La Boucle' },
 		{ href: '#faq', label: 'FAQ' }
 	];
 

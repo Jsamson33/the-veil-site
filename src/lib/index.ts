@@ -1,2 +1,2 @@
-export { RUNES_DATA, RUNE_CATEGORIES } from './data/runes';
-export type { Rune, RuneCategory, RuneElement } from './data/runes';
+export { getRenderedTheme, toggleTheme } from './theme';
+export type { Theme } from './theme';

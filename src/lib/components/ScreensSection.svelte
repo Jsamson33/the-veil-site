@@ -4,7 +4,8 @@
 			<span class="section-kicker">Immersion Visuelle</span>
 			<h2 class="section-title">L'EXPÉRIENCE DANS LE CREUSET</h2>
 			<p class="section-subtitle">
-				Une interface sur mesure pensée pour le mobile : épurée, tactile, sans micro-transactions invasives ni publicités intrusives.
+				Une interface pensée pour le mobile : épurée, tactile, sans distractions.
+				Le reste, vous le découvrirez une fois le Voile franchi.
 			</p>
 		</div>
 
@@ -17,12 +18,13 @@
 						<div class="mockup-ray"></div>
 						<div class="mockup-core"></div>
 					</div>
-					<div class="screen-badge">COMBAT CONTINU</div>
+					<div class="screen-badge">LE CERCLE</div>
 				</div>
 				<div class="screen-info">
 					<h3 class="screen-name">Le Plan Astral</h3>
 					<p class="screen-text">
-						L'arène circulaire hypnotique. Vos particules tourbillonnent vers le centre tandis que le Rayon Tri-Phasé foudroie le Gardien en approche.
+						Le cercle, les flux, l'attente. Une arène épurée où chaque seconde compte,
+						et où le silence finit toujours par se rompre.
 					</p>
 				</div>
 			</div>
@@ -36,12 +38,13 @@
 							<span></span><span></span><span></span>
 						</div>
 					</div>
-					<div class="screen-badge">MÉTA-PROGRESSION</div>
+					<div class="screen-badge">L'ATELIER</div>
 				</div>
 				<div class="screen-info">
 					<h3 class="screen-name">L'Atelier Alchimique</h3>
 					<p class="screen-text">
-						Forgez vos 28 runes, observez leur niveau de départ permanent grandir et insérez des gemmes de Prisme dans vos châsses élémentaires.
+						Un lieu de transformation. Ce qui s'y forge ne se montre pas au premier regard,
+						et certaines runes attendent leur heure.
 					</p>
 				</div>
 			</div>
@@ -56,12 +59,13 @@
 							<div class="parchment-line"></div>
 						</div>
 					</div>
-					<div class="screen-badge">RECHERCHES 24/7</div>
+					<div class="screen-badge">LE GRIMOIRE</div>
 				</div>
 				<div class="screen-info">
 					<h3 class="screen-name">Le Grimoire Millénaire</h3>
 					<p class="screen-text">
-						Consacrez des heures d'études pour percer les secrets du Voile, accélérer l'écoulement du temps et maîtriser les sorts majeurs.
+						Des pages qui s'écrivent avec le temps. Certaines réponses demandent des jours.
+						D'autres, une éternité.
 					</p>
 				</div>
 			</div>
@@ -71,17 +75,18 @@
 				<div class="screen-preview-box">
 					<div class="screen-sigil ranking-sigil" aria-hidden="true">
 						<div class="mockup-ranks">
-							<span>Novice</span>
-							<span>Expert</span>
-							<span>Maître</span>
+							<span>?</span>
+							<span>?</span>
+							<span>?</span>
 						</div>
 					</div>
-					<div class="screen-badge">RANGS & RELIQUES</div>
+					<div class="screen-badge">L'INITIATION</div>
 				</div>
 				<div class="screen-info">
 					<h3 class="screen-name">La Voie de l'Initié</h3>
 					<p class="screen-text">
-						Grimpez les 5 degrés d'initiation (Novice, Confirmé, Expert, Maître, Grand Maître) et débloquez les Reliques uniques de jalon.
+						Des paliers à franchir, des secrets à mériter. La progression ne se mesure pas
+						seulement en chiffres.
 					</p>
 				</div>
 			</div>

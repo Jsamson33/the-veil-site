@@ -3,27 +3,27 @@
 		{
 			question: 'Sur quelle plateforme le jeu est-il disponible ?',
 			answer:
-				"<strong>The Veil: Astral Idle</strong> est conçu avec Flutter et ciblé nativement pour les smartphones et tablettes <strong>Android</strong>. L'APK est téléchargeable directement sur ce site vitrine et arrive très prochainement sur le Google Play Store."
+				"<strong>The Veil: Astral Idle</strong> est conçu avec Flutter pour <strong>Android</strong>. L'APK est disponible via ce site, et une arrivée sur le Store se prépare."
 		},
 		{
 			question: 'Le jeu nécessite-t-il une connexion internet permanente ?',
 			answer:
-				"<strong>Non, absolument pas.</strong> The Veil est conçu selon une architecture <em>100 % Offline-First</em>. Toutes vos données de sauvegarde sont stockées localement sur votre appareil. Votre Grimoire continue ses études et l'Atelier distille passivement même en mode avion."
+				"<strong>Non.</strong> Votre sanctuaire continue de veiller même hors-ligne. La progression ne dépend pas d'une connexion constante."
 		},
 		{
 			question: 'Quelle est la différence avec les autres Tower Defense ou Idle Games ?',
 			answer:
-				"Contrairement aux jeux encombrés d'essaims chaotiques et d'effets aveuglants, The Veil privilégie une <strong>direction artistique épurée et zen</strong> avec un vortex circulaire clair, un <strong>unique Gardien par vague</strong>, une focalisation continue via le Rayon Tri-Phasé et un contrôle spatial précis (rayon du cercle, viscosité de dérive, onde de choc)."
+				'The Veil privilégie le calme, la contemplation et la précision plutôt que le chaos visuel. Le reste, vous le découvrirez en jouant.'
 		},
 		{
 			question: 'Comment fonctionnent les Strates du Voile ?',
 			answer:
-				"Lorsque vous franchissez l'étage 100 d'une strate, la strate suivante est déverrouillée. Les strates supérieures présentent des ennemis plus résistants et redoutables, mais décuplent les récompenses d'Ambre Astral obtenues par étage."
+				'Le Voile est vaste. Chaque strate franchie en révèle une autre, plus profonde et plus exigeante. La suite appartient aux initiés.'
 		},
 		{
 			question: "Qu'apportera la mise à jour V2 ?",
 			answer:
-				'La V2 introduira le <strong>Second Triplet Élémentaire</strong> : Feu, Foudre et Éther, accompagnés de nouveaux Gardiens Majeurs, de nouvelles matrices de runes à combiner et de fonctionnalités de transcendance astrale.'
+				"La V2 étendra les frontières du Voile. Nous n'en dirons pas plus pour l'instant."
 		}
 	];
 </script>
@@ -34,7 +34,7 @@
 			<span class="section-kicker">Éclaircissements</span>
 			<h2 class="section-title">FOIRE AUX QUESTIONS</h2>
 			<p class="section-subtitle">
-				Tout ce que vous devez savoir avant de franchir le Voile Astral.
+				Quelques réponses, sans trop en dévoiler.
 			</p>
 		</div>
 
