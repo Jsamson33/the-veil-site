@@ -28,9 +28,13 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+          cache: npm
 
-      - name: Build / Sync static files
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build static site
         run: npm run build
 
       - name: Setup Pages
@@ -39,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'public'
+          path: 'build'
 
       - name: Deploy to GitHub Pages
         id: deployment

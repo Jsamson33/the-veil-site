@@ -1208,6 +1208,23 @@ img, svg {
   color: var(--c-gold);
 }
 
+.runes-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 40px;
+  color: var(--text-muted);
+}
+
+.runes-empty-title {
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.runes-empty-hint {
+  font-size: 0.85rem;
+}
+
 /* ==========================================================================
    Ora et Labora Loop
    ========================================================================== */

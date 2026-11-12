@@ -1,0 +1,110 @@
+<section class="section concept-section" id="concept">
+	<div class="container">
+		<div class="section-heading text-center">
+			<span class="section-kicker">L'Hypnose du Vortex</span>
+			<h2 class="section-title">UN DESIGN ZEN & ALCHIMIQUE</h2>
+			<p class="section-subtitle">
+				Oubliez les nuées confuses d'ennemis et les explosions saturées. The Veil réinvente le genre incrémental
+				autour d'une signature épurée inspirée des astrolabes hermétiques et des manuscrits anciens.
+			</p>
+		</div>
+
+		<div class="pillars-grid">
+			<!-- Pillar 1 -->
+			<article class="pillar-card">
+				<div class="pillar-icon air-tint">
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<circle cx="12" cy="12" r="10"></circle>
+						<path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path>
+						<path d="M2 12h20"></path>
+					</svg>
+				</div>
+				<h3 class="pillar-title">Le Rayon Tri-Phasé</h3>
+				<p class="pillar-text">
+					Un unique Gardien ou Mini-Boss par vague. Dès qu'il franchit l'Envergure du Cercle, votre Avatar le verrouille
+					avec un faisceau continu tressé mêlant l'Air, la Terre et l'Eau en temps réel.
+				</p>
+			</article>
+
+			<!-- Pillar 2 -->
+			<article class="pillar-card">
+				<div class="pillar-icon earth-tint">
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+						<polyline points="2 17 12 22 22 17"></polyline>
+						<polyline points="2 12 12 17 22 12"></polyline>
+					</svg>
+				</div>
+				<h3 class="pillar-title">L'Atelier des Runes</h3>
+				<p class="pillar-text">
+					Dépensez l'Ambre Astral pour élever définitivement le niveau de départ de vos 28 Runes, sertir des Prismes colorés
+					sur chaque flux et forger vos Reliques de puissance.
+				</p>
+			</article>
+
+			<!-- Pillar 3 -->
+			<article class="pillar-card">
+				<div class="pillar-icon water-tint">
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"></path>
+						<path d="M6 6h10"></path>
+						<path d="M6 10h10"></path>
+						<path d="M6 14h6"></path>
+					</svg>
+				</div>
+				<h3 class="pillar-title">Le Grimoire & Études</h3>
+				<p class="pillar-text">
+					Conformément à l'adage alchimique <em>Ora et Labora</em>, lancez des recherches temporelles 24h/24 pour
+					débloquer l'achat groupé (&times;Max), les accélérations de vitesse et des pouvoirs transcendants.
+				</p>
+			</article>
+
+			<!-- Pillar 4 -->
+			<article class="pillar-card">
+				<div class="pillar-icon gold-tint">
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
+					>
+						<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+						<circle cx="12" cy="11" r="3"></circle>
+					</svg>
+				</div>
+				<h3 class="pillar-title">100% Offline-First</h3>
+				<p class="pillar-text">
+					Votre sanctuaire continue d'extraire et de distiller les énergies même lorsque l'application est fermée.
+					Aucune connexion constante n'est requise pour progresser.
+				</p>
+			</article>
+		</div>
+	</div>
+</section>

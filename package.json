@@ -1,26 +1,44 @@
 {
-  "name": "the-veil-site",
-  "version": "1.0.0",
-  "private": true,
-  "description": "Site vitrine officiel de The Veil: Astral Idle",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "node -e \"const fs=require('fs'); fs.copyFileSync('index.html','public/index.html'); fs.copyFileSync('style.css','public/style.css'); fs.copyFileSync('main.js','public/main.js'); fs.cpSync('assets','public/assets',{recursive:true}); console.log('Static site synced to public/');\"",
-    "preview": "vite preview",
-    "serve": "npx serve public"
-  },
-  "devDependencies": {
-    "vite": "^6.0.0"
-  },
-  "keywords": [
-    "the-veil",
-    "astral-idle",
-    "idle-game",
-    "alchemical",
-    "flutter",
-    "game-showcase"
-  ],
-  "author": "Jsamson",
-  "license": "MIT"
+	"name": "the-veil-site",
+	"version": "2.0.0",
+	"private": true,
+	"description": "Site vitrine officiel de The Veil: Astral Idle",
+	"type": "module",
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*"
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"serve": "npx serve build"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-static": "^4.0.0",
+		"@sveltejs/kit": "^3.0.0",
+		"@sveltejs/vite-plugin-svelte": "^7.2.0",
+		"svelte": "^5.57.2",
+		"svelte-check": "^4.6.0",
+		"typescript": "^6.0.3",
+		"vite": "^8.3.0"
+	},
+	"engines": {
+		"node": ">=22.17"
+	},
+	"keywords": [
+		"the-veil",
+		"astral-idle",
+		"idle-game",
+		"alchemical",
+		"flutter",
+		"game-showcase",
+		"svelte",
+		"sveltekit"
+	],
+	"author": "Jsamson",
+	"license": "MIT"
 }
