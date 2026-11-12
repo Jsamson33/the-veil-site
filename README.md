@@ -1,54 +1,60 @@
 # 🌌 The Veil: Astral Idle — Site Vitrine Officiel
 
-> **Site vitrine statique moderne et contemplatif pour le jeu mobile *The Veil: Astral Idle*.**
+> **Site vitrine moderne et contemplatif pour le jeu mobile *The Veil: Astral Idle*.**
 
 Ce dépôt héberge le site officiel de présentation de **The Veil: Astral Idle**, un Idle Game alchimique et stratégique développé sous Flutter pour Android.
+
+Le site est construit avec **Svelte 5** et **SvelteKit 3**, rendu entièrement en statique via `@sveltejs/adapter-static`.
 
 ---
 
 ## ✨ Fonctionnalités du Site
 
 - **Simulation interactive du Cercle Astral (Canvas HTML5 / Canvas 2D)** :
-  - Particules élémentaires d'Air (Vert Céladon), de Terre (Ocre Ambré) et d'Eau (Bleu Azur) aspirées vers le centre du vortex.
-  - Dérive du Gardien / Mini-Boss de vague.
-  - Rayon Tri-Phasé continu tressé verrouillant la cible à l'entrée du Cercle.
-  - Interaction utilisateur : clic/toucher pour déclencher une *Onde de Répulsion*, filtres par élément et sélecteur de vitesse ($\times 1$, $\times 2$, $\times 5$).
-- **Codex des 28 Runes du jeu** :
-  - Données fidèles aux spécifications du jeu (*Canalisation*, *Égide*, *Alchimie*, *Synergies*).
-  - Onglets accessibles conformes aux standards ARIA (*WAI-ARIA Tabs* & *focusgroup*).
-  - Barre de recherche instantanée.
+  - Particules élémentaires, Gardien et faisceau animés en temps réel vers le centre du vortex.
+  - Contrôles tactiles : onde de répulsion, filtres par flux et sélecteur de vitesse.
+- **Système de runes volontairement évasif** :
+  - Une section teaser qui mentionne le système sans révéler le Codex complet ni ses mécaniques.
+  - Le mystère est conservé pour donner envie de découvrir le jeu.
 - **Thème bimodal Parchemin Hermétique & Nuit Astrale** :
   - Support de `light-dark()` et `<meta name="color-scheme">` sans flash (anti-FOUC).
   - Palette originale du jeu (`#FAF8F5`, `#D4AF37`, `#8A7968`, etc.).
 - **Architecture de jeu & Présentation "Ora et Labora"** :
-  - Explication de la boucle de run et de la métaprogression dans l'Atelier et le Grimoire.
+  - Une boucle présentée de façon atmosphérique, sans dévoiler les détails de progression.
 - **Section Téléchargement & FAQ intégrée** :
-  - Accès aux releases APK Android et aperçu du déploiement Store.
-- **Déploiement GitHub Pages automatisé** :
-  - Workflow GitHub Actions inclus (`.github/workflows/deploy.yml`).
+  - Accès aux releases APK Android et réponses volontairement succinctes.
+- **Déploiement statique automatisé** :
+  - Workflows GitHub Actions pour GitHub Pages et Firebase Hosting.
 
 ---
 
 ## 🛠️ Démarrage Local
 
-Le site est conçu en **HTML5 / CSS3 / JavaScript moderne (vanilla)**, sans dépendance runtime obligatoire.
-
-### Option 1 : Avec npx / Vite (recommandé)
+Prérequis : **Node.js 22.17+** et npm.
 
 ```bash
-# Lancer le serveur de développement local avec rechargement à chaud
-npx vite
-# Ou ouvrir sur http://localhost:5173
+npm install
+
+# Serveur de développement avec rechargement à chaud
+npm run dev
+# http://localhost:5173
+
+# Vérification TypeScript / Svelte
+npm run check
+
+# Build statique de production (dossier build/)
+npm run build
+
+# Prévisualisation du build
+npm run preview
 ```
 
-### Option 2 : Avec un serveur HTTP standard
+### Déploiement Firebase
+
+`firebase.json` pointe vers le dossier `build/` et lance automatiquement `npm run build` avant chaque déploiement :
 
 ```bash
-# Via Python
-python3 -m http.server 8080
-
-# Ou via npx serve
-npx serve .
+npx firebase-tools deploy
 ```
 
 ---
@@ -57,20 +63,25 @@ npx serve .
 
 ```text
 the-veil-site/
-├── .github/
-│   └── workflows/
-│       └── deploy.yml        # Déploiement automatique sur GitHub Pages
-├── assets/
-│   ├── favicon.png           # Favicon du site
-│   └── icons/
-│       └── icon-512.png      # Icône haute résolution du jeu
-├── index.html                # Page d'accueil complète et accessible
-├── style.css                 # Feuille de style moderne avec light-dark()
-├── main.js                   # Moteur de simulation Canvas & Codex
-├── package.json              # Scripts et dépendances de développement
-├── .gitignore                # Fichiers exclus du versionnement
-├── LICENSE                   # Licence MIT
-└── README.md                 # Documentation du projet
+├── .github/workflows/         # CI : GitHub Pages & Firebase Hosting
+├── src/
+│   ├── app.html               # Shell HTML, polices, anti-FOUC, favicon
+│   ├── app.css                # Design system global (thèmes light-dark)
+│   ├── lib/
+│   │   ├── components/        # Sections et îlots interactifs Svelte 5
+│   │   ├── theme.ts           # Gestion du thème clair/sombre
+│   │   └── index.ts
+│   └── routes/
+│       ├── +layout.svelte     # Chrome du site (fond, header, footer)
+│       ├── +layout.ts         # Prerender global
+│       └── +page.svelte       # Page d'accueil et métadonnées SEO
+├── static/
+│   └── assets/                # Favicon et icônes servis tels quels
+├── vite.config.ts             # Config Vite + SvelteKit + adapter-static
+├── firebase.json              # Hébergement Firebase (build/)
+├── package.json
+├── LICENSE                    # Licence MIT
+└── README.md
 ```
 
 ---
